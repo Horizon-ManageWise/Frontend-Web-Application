@@ -1,0 +1,34 @@
+<!-- Button to Redirect to Statistics -->
+<button (click)="navigateToStatistics()" class="redirect-button">{{ 'statisticsButton' | translate }}</button>
+<p>{{ 'timelineText' | translate }}</p>
+
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions?.series"
+    [chart]="chartOptions?.chart"
+    [plotOptions]="chartOptions?.plotOptions"
+    [xaxis]="chartOptions?.xaxis"
+    [yaxis]="chartOptions?.yaxis"
+    [tooltip]="chartOptions?.tooltip"
+    [legend]="chartOptions?.legend">
+  </apx-chart>
+</div>
+
+<!-- User Stories Table -->
+<h2>{{ 'userStoriesTitle' | translate }}</h2>
+<table class="user-stories-table">
+  <thead>
+  <tr>
+    <th>{{ 'titleHeader' | translate }}</th>
+    <th>{{ 'startDateHeader' | translate }}</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let story of userStories"
+      [ngStyle]="{'background-color': getColorBySprint(story.sprint)}">
+    <td>{{ story.title }}</td>
+    <td>{{ story.effort }}</td>
+  </tr>
+  </tbody>
+</table>

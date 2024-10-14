@@ -1,0 +1,46 @@
+<mat-toolbar [style.background-color]="'black'" color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon *ngIf="sidenav.opened" style="color: white;">close</mat-icon>
+    <mat-icon *ngIf="!sidenav.opened" style="color: white;">apps</mat-icon>
+  </button>
+
+  <img src="https://i.imgur.com/71rP5ni.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+
+  <a mat-button [routerLink]="['/project']" style="margin-left: 20px; color: white;">{{ 'projectTitle' | translate }}</a> <!-- Usando traducción para el botón Project -->
+
+  <span class="mat-spacer"></span>
+
+  <button mat-icon-button aria-label="Notifications">
+    <mat-icon style="color: white;">notifications</mat-icon>
+  </button>
+
+  <button mat-icon-button aria-label="Profile">
+    <mat-icon style="color: white;">account_circle</mat-icon>
+  </button>
+
+  <app-language-switcher style="color: white;"></app-language-switcher>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav style="background-color: #FF8C00;">
+    <mat-nav-list>
+      <ng-container *ngFor="let option of otherOptions">
+        <mat-list-item (click)="sidenav.mode === 'over' && sidenav.toggle()" [routerLink]="option.path">
+          <ng-container *ngIf="option.icon.startsWith('http'); else materialIcon">
+            <img [src]="option.icon" alt="{{ option.title }} icon" width="24px" height="24px">
+          </ng-container>
+          <ng-template #materialIcon>
+            <mat-icon matListItemIcon>{{ option.icon }}</mat-icon>
+          </ng-template>
+          {{ option.title }}
+        </mat-list-item>
+      </ng-container>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
