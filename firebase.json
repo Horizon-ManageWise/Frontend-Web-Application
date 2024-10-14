@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/stadistics-bounded-context/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

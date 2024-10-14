@@ -1,4 +1,5 @@
 <!-- Button to Redirect to Statistics -->
+
 <button (click)="navigateToStatistics()" class="redirect-button">{{ 'statisticsButton' | translate }}</button>
 <p>{{ 'timelineText' | translate }}</p>
 
@@ -19,6 +20,7 @@
 <table class="user-stories-table">
   <thead>
   <tr>
+    <th>{{ 'UserStory' | translate}} </th>
     <th>{{ 'titleHeader' | translate }}</th>
     <th>{{ 'startDateHeader' | translate }}</th>
 
@@ -27,6 +29,7 @@
   <tbody>
   <tr *ngFor="let story of userStories"
       [ngStyle]="{'background-color': getColorBySprint(story.sprint)}">
+    <td>{{ story.id }}</td>
     <td>{{ story.title }}</td>
     <td>{{ story.effort }}</td>
   </tr>

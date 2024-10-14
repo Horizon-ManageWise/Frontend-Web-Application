@@ -1,6 +1,6 @@
-/* Estilo para la línea de tiempo */
-.timeline {
-  margin: 20px;
+.timeline-page {
+  transform: scale(0.3); /* Scale down to 30% for the timeline */
+  transform-origin: top left; /* Ensure scaling starts from the top left */
 }
 
 /* Estilo para las historias de usuario */
@@ -8,21 +8,23 @@
 .user-stories-table {
   width: 100%; /* Ancho completo */
   border-collapse: collapse; /* Colapsar bordes */
-  margin-top: 20px; /* Espacio arriba de la tabla */
+  margin-top: 5px; /* Reducir espacio arriba de la tabla */
 }
 
 /* Estilo para los encabezados de la tabla */
 .user-stories-table th {
   background-color: #3498db; /* Color de fondo azul para encabezados */
   color: white; /* Color del texto */
-  padding: 10px; /* Espaciado interno */
+  padding: 3px; /* Reducir espaciado interno */
   text-align: left; /* Alinear texto a la izquierda */
+  font-size: 10px; /* Tamaño de fuente más pequeño */
 }
 
 /* Estilo para las celdas de la tabla */
 .user-stories-table td {
   border: 1px solid #ccc; /* Borde gris */
-  padding: 10px; /* Espaciado interno */
+  padding: 3px; /* Reducir espaciado interno */
+  font-size: 10px; /* Tamaño de fuente más pequeño */
 }
 
 /* Estilo para las filas de la tabla */
@@ -32,7 +34,7 @@
 
 /* Estilo para la estimación de esfuerzo */
 .effort-estimation {
-  margin-top: 10px;
+  margin-top: 3px; /* Reducir margen superior */
 }
 
 /* Estilo del modal */
@@ -51,19 +53,19 @@
 /* Contenido del modal */
 .modal-content {
   background-color: #fefefe; /* Color de fondo del modal */
-  margin: 15% auto; /* 15% desde la parte superior y centrado */
-  padding: 30px; /* Espaciado interno más amplio */
+  margin: 5% auto; /* Reducir margen superior y centrado */
+  padding: 15px; /* Reducir espaciado interno más amplio */
   border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
   width: 90%; /* Ancho del modal más estrecho */
-  max-width: 400px; /* Ancho máximo del modal */
+  max-width: 250px; /* Ancho máximo del modal */
 }
 
 /* Estilo del botón de cerrar */
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 20px; /* Tamaño de fuente más pequeño */
   font-weight: bold;
 }
 
@@ -78,8 +80,8 @@
 /* Estilo para inputs */
 input[type="date"],
 input[type="number"] {
-  margin: 10px 0; /* Espaciado entre inputs */
-  padding: 10px; /* Espaciado interno para los inputs */
+  margin: 3px 0; /* Reducir espaciado entre inputs */
+  padding: 5px; /* Reducir espaciado interno para los inputs */
   border: 1px solid #ccc; /* Borde del input */
   border-radius: 5px; /* Bordes redondeados para los inputs */
   width: 100%; /* Ancho completo */
@@ -87,21 +89,19 @@ input[type="number"] {
 }
 
 /* Estilo del botón */
-/* Estilo del botón */
 button {
   background-color: #3498db; /* Color de fondo azul */
   color: white; /* Color del texto */
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
-  padding: 8px 15px; /* Espaciado interno para botones */
+  padding: 3px 8px; /* Reducir espaciado interno para botones */
   cursor: pointer; /* Cambia el cursor al pasar el mouse */
   transition: background-color 0.3s; /* Transición suave al cambiar de color */
-  font-size: 14px; /* Tamaño de fuente más pequeño */
-  margin: 5px; /* Espacio entre los botones */
+  font-size: 10px; /* Tamaño de fuente más pequeño */
+  margin: 2px; /* Reducir espacio entre los botones */
 }
 
 /* Efecto hover para el botón */
 button:hover {
   background-color: #2980b9; /* Color más oscuro al pasar el mouse */
 }
-

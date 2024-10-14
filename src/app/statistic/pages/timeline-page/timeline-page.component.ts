@@ -84,7 +84,6 @@ export class TimelinePageComponent implements OnInit {
     const seriesData: SeriesData[] = this.userStories.reduce((acc: SeriesData[], story) => {
       const existingSprint = acc.find(s => s.name === `Sprint ${story.sprint}`);
 
-      // Establece los datos para el rango de barras con el color basado en el sprint
       const storyData = {
         x: `Sprint ${story.sprint}`,
         y: [
@@ -105,13 +104,36 @@ export class TimelinePageComponent implements OnInit {
       return acc;
     }, []);
 
-    console.log("Series Data:", seriesData); // Verifica la estructura de datos
+    console.log("Series Data:", seriesData);
 
     this.chartOptions = {
       series: seriesData,
       chart: {
         height: 350,
-        type: "rangeBar"
+        type: "rangeBar",
+        toolbar: {
+          show: true,
+          tools: {
+            download: false, // Permite la descarga
+            selection: true,
+            zoom: true,
+            zoomin: true,
+            zoomout: true,
+            pan: true,
+            reset: true,
+          },
+          export: {
+            csv: {
+              enabled: false // Deshabilita exportación CSV
+            },
+            svg: {
+              enabled: false // Deshabilita exportación SVG
+            },
+            png: {
+              enabled: false // Habilita exportación PNG
+            }
+          }
+        }
       },
       plotOptions: {
         bar: {
@@ -126,6 +148,7 @@ export class TimelinePageComponent implements OnInit {
           format: 'dd MMM',
         },
       },
+
       yaxis: {
         labels: {
           style: {
@@ -138,6 +161,7 @@ export class TimelinePageComponent implements OnInit {
       }
     };
   }
+
 
   getColorBySprint(sprint: number): string {
     return this.sprintColors[sprint] || '#000000'; // Default to black if not found
