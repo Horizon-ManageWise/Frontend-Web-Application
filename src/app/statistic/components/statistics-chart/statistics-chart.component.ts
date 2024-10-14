@@ -111,31 +111,38 @@ export class StatisticsChartComponent implements OnInit {
           tooltip: {
             callbacks: {
               title: (tooltipItems) => {
-                const sprintIndex = tooltipItems[0].dataIndex; // Get the index of the data point
-                const sprint = sprintCounts[sprintIndex + 1]; // Get the corresponding sprint data
-                return `Sprint ${sprintIndex + 1}`; // Set the title for the tooltip
+                const sprintIndex = tooltipItems[0].dataIndex;
+                return `Sprint ${sprintIndex + 1}`;
               },
               label: (tooltipItem: TooltipItem<'bar'>) => {
                 const datasetLabel = tooltipItem.dataset.label || '';
-                const value = tooltipItem.raw as number; // Use 'as number' to assert type
+                const value = tooltipItem.raw as number;
                 return `${datasetLabel}: ${value.toFixed(2)}%`;
               },
               afterLabel: (tooltipItem: TooltipItem<'bar'>) => {
-                const sprintIndex = tooltipItem.dataIndex; // Get the index of the data point
-                const sprintData = sprintCounts[sprintIndex + 1]; // Get the corresponding sprint data
-                const titles = [...sprintData.titlesComplete, ...sprintData.titlesInProgress]; // Combine complete and in-progress titles
+                const sprintIndex = tooltipItem.dataIndex;
+                const sprintData = sprintCounts[sprintIndex + 1];
 
-                // Build the additional info string
+                // Determina si es el dataset de "Completadas" o "En Progreso"
+                let titles: { title: string; owner: string }[];
+                if (tooltipItem.datasetIndex === 0) { // Dataset "Completadas"
+                  titles = sprintData.titlesComplete;
+                } else { // Dataset "En Progreso"
+                  titles = sprintData.titlesInProgress;
+                }
+
+                // Construir la cadena de información adicional
                 const additionalInfo = titles.map((titleInfo) => {
                   return `Title: ${titleInfo.title}, Owner: ${titleInfo.owner}`;
                 }).join('\n');
 
-                return additionalInfo || 'No titles'; // Return the combined string or a default message
+                return additionalInfo || 'No titles'; // Mostrar las historias relevantes o un mensaje por defecto
               }
             }
           }
         }
       }
+
     });
   }
 
