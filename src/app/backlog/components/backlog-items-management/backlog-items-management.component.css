@@ -36,3 +36,35 @@
   display: flex;
   justify-content: space-between;
 }
+
+.edit-button{
+  border: none;
+  color: blue;
+  background-color: transparent;
+}
+.edit-button:hover{
+  color: navy;
+  cursor: pointer;
+}
+
+.delete-button{
+  border: none;
+  color: red;
+  background-color: transparent;
+}
+
+.delete-button:hover{
+  color: brown;
+  cursor: pointer;
+}
+
+.items-button{
+  background-color: turquoise;
+  color: white;
+  border-color: transparent;
+  border-radius: 8px;
+}
+.items-button:hover{
+  background-color: darkcyan;
+  cursor: pointer;
+}

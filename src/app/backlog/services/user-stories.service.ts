@@ -31,8 +31,8 @@ export class UserStoriesService {
   }
 
   // Create Resource
-  create(item: UserStory): Observable<UserStory> {
-    return this.http.post<UserStory>(this.resourcePath(), JSON.stringify(item), this.httpOptions)
+  create(item: any): Observable<UserStory> {
+    return this.http.post<UserStory>(this.resourcePath(), item, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
@@ -43,7 +43,7 @@ export class UserStoriesService {
   }
 
   // Update Resource
-  update(id: number, item: UserStory): Observable<UserStory> {
+  update(id: number, item: any): Observable<UserStory> {
     return this.http.put<UserStory>(`${this.resourcePath()}/${id}`, item, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }

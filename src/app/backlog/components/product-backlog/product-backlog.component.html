@@ -5,6 +5,7 @@
       <span>US{{ userStory.id }}</span>
       <span>{{ userStory.title }}</span>
       <span>{{ userStory.status }}</span>
+      <button class="add-item" (click)="onAddUserStory(userStory)"><mat-icon>add</mat-icon></button>
     </div>
   </mat-card>
 </mat-card>
@@ -21,8 +22,8 @@
       <span>US{{ userStory.id }}</span>
       <span>{{ userStory.title }}</span>
       <span>{{ userStory.status }}</span>
-      <button>X</button>
+      <button class="delete-button" (click)="onDeleteUserStory(userStory)"><mat-icon>delete</mat-icon></button>
     </div>
   </mat-card>
-  <button class="add-item">+ Add an item</button>
+  <!--<button class="add-item">+ Add an item</button>-->
 </mat-card>
