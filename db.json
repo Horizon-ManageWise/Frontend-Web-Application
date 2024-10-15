@@ -1,0 +1,356 @@
+{
+  "regions": [
+    {
+      "id": 1,
+      "name": "Europe"
+    },
+    {
+      "id": 2,
+      "name": "Americas"
+    },
+    {
+      "id": 3,
+      "name": "Asia"
+    },
+    {
+      "id": 4,
+      "name": "Middle East and Africa"
+    }
+  ],
+  "countries": [
+    {
+      "id": "IT",
+      "name": "Italy",
+      "regionId": 1
+    },
+    {
+      "id": "JP",
+      "name": "Japan",
+      "regionId": 3
+    },
+    {
+      "id": "US",
+      "name": "United States of America",
+      "regionId": 2
+    },
+    {
+      "id": "CA",
+      "name": "Canada",
+      "regionId": 2
+    },
+    {
+      "id": "CN",
+      "name": "China",
+      "regionId": 3
+    },
+    {
+      "id": "IN",
+      "name": "India",
+      "regionId": 3
+    },
+    {
+      "id": "AU",
+      "name": "Australia",
+      "regionId": 3
+    },
+    {
+      "id": "ZW",
+      "name": "Zimbabwe",
+      "regionId": 4
+    },
+    {
+      "id": "SG",
+      "name": "Singapore",
+      "regionId": 3
+    },
+    {
+      "id": "UK",
+      "name": "United Kingdom",
+      "regionId": 1
+    },
+    {
+      "id": "FR",
+      "name": "France",
+      "regionId": 1
+    },
+    {
+      "id": "DE",
+      "name": "Germany",
+      "regionId": 1
+    },
+    {
+      "id": "ZM",
+      "name": "Zambia",
+      "regionId": 4
+    },
+    {
+      "id": "EG",
+      "name": "Egypt",
+      "regionId": 4
+    },
+    {
+      "id": "BR",
+      "name": "Brazil",
+      "regionId": 2
+    },
+    {
+      "id": "CH",
+      "name": "Switzerland",
+      "regionId": 1
+    },
+    {
+      "id": "NL",
+      "name": "Netherlands",
+      "regionId": 1
+    },
+    {
+      "id": "MX",
+      "name": "Mexico",
+      "regionId": 2
+    },
+    {
+      "id": "KW",
+      "name": "Kuwait",
+      "regionId": 4
+    },
+    {
+      "id": "IL",
+      "name": "Israel",
+      "regionId": 4
+    },
+    {
+      "id": "DK",
+      "name": "Denmark",
+      "regionId": 1
+    },
+    {
+      "id": "ML",
+      "name": "Malaysia",
+      "regionId": 3
+    },
+    {
+      "id": "NG",
+      "name": "Nigeria",
+      "regionId": 4
+    },
+    {
+      "id": "AR",
+      "name": "Argentina",
+      "regionId": 2
+    },
+    {
+      "id": "BE",
+      "name": "Belgium",
+      "regionId": 1
+    },
+    {
+      "id": "PE",
+      "name": "Peru",
+      "regionId": 2
+    },
+    {
+      "id": "BO",
+      "name": "Bolivia",
+      "regionId": 2
+    },
+    {
+      "id": "CL",
+      "name": "Chile",
+      "regionId": 2
+    }
+  ],
+  "locations": [
+    {
+      "id": 1000,
+      "streetAddress": "1297 Via Cola di Rie",
+      "postalCode": "00989",
+      "city": "Roma city",
+      "stateProvince": "prov2",
+      "countryId": "IT"
+    },
+    {
+      "id": 1100,
+      "streetAddress": "93091 Calle della Testa",
+      "postalCode": "10934",
+      "city": "Venice",
+      "stateProvince": null,
+      "countryId": "IT"
+    },
+    {
+      "id": 1200,
+      "streetAddress": "2017 Shinjuku-ku",
+      "postalCode": "1689",
+      "city": "Tokyo",
+      "stateProvince": "Tokyo Prefecture",
+      "countryId": "JP"
+    },
+    {
+      "id": 1300,
+      "streetAddress": "9450 Kamiya-cho",
+      "postalCode": "6823",
+      "city": "Hiroshima",
+      "stateProvince": null,
+      "countryId": "JP"
+    },
+    {
+      "id": 1400,
+      "streetAddress": "2014 Jabberwocky Rd",
+      "postalCode": "26192",
+      "city": "Southlake",
+      "stateProvince": "Texas",
+      "countryId": "US"
+    },
+    {
+      "id": 1500,
+      "streetAddress": "2011 Interiors Blvd",
+      "postalCode": "99236",
+      "city": "South San Francisco",
+      "stateProvince": "California",
+      "countryId": "US"
+    },
+    {
+      "id": 1600,
+      "streetAddress": "2007 Zagora St",
+      "postalCode": "50090",
+      "city": "South Brunswick",
+      "stateProvince": "New Jersey",
+      "countryId": "US"
+    },
+    {
+      "id": 1700,
+      "streetAddress": "2004 Charade Rd",
+      "postalCode": "98199",
+      "city": "Seattle",
+      "stateProvince": "Washington",
+      "countryId": "US"
+    },
+    {
+      "id": 1800,
+      "streetAddress": "147 Spadina Ave",
+      "postalCode": "M5V 2L7",
+      "city": "Toronto",
+      "stateProvince": "Ontario",
+      "countryId": "CA"
+    },
+    {
+      "id": 1900,
+      "streetAddress": "6092 Boxwood St",
+      "postalCode": "YSW 9T2",
+      "city": "Whitehorse",
+      "stateProvince": "Yukon",
+      "countryId": "CA"
+    },
+    {
+      "id": 2000,
+      "streetAddress": "40-5-12 Laogianggen",
+      "postalCode": "190518",
+      "city": "Beijing",
+      "stateProvince": null,
+      "countryId": "CN"
+    },
+    {
+      "id": 2100,
+      "streetAddress": "1298 Vileparle (E)",
+      "postalCode": "490231",
+      "city": "Bombay",
+      "stateProvince": "Maharashtra",
+      "countryId": "IN"
+    },
+    {
+      "id": 2200,
+      "streetAddress": "912-98 Victoria Street",
+      "postalCode": "2901",
+      "city": "Sydney",
+      "stateProvince": "New South Wales",
+      "countryId": "AU"
+    },
+    {
+      "id": 2300,
+      "streetAddress": "198 Clementi North",
+      "postalCode": "540198",
+      "city": "Singapore",
+      "stateProvince": null,
+      "countryId": "SG"
+    },
+    {
+      "id": 2400,
+      "streetAddress": "8204 Arthur St",
+      "postalCode": null,
+      "city": "London",
+      "stateProvince": null,
+      "countryId": "UK"
+    },
+    {
+      "id": 2500,
+      "streetAddress": "Magdalen Centre, The Oxford Science Park",
+      "postalCode": "OX9 9ZB",
+      "city": "Oxford",
+      "stateProvince": "Oxford",
+      "countryId": "UK"
+    },
+    {
+      "id": 2600,
+      "streetAddress": "9702 Chester Road",
+      "postalCode": "09629850293",
+      "city": "Stretford",
+      "stateProvince": "Manchester",
+      "countryId": "UK"
+    },
+    {
+      "id": 2700,
+      "streetAddress": "Schwanthalerstr. 7031",
+      "postalCode": "80925",
+      "city": "Munich",
+      "stateProvince": "Bavaria",
+      "countryId": "DE"
+    },
+    {
+      "id": 2800,
+      "streetAddress": "Rua Frei Caneca 1360",
+      "postalCode": "01307-002",
+      "city": "Sao Paulo",
+      "stateProvince": "Sao Paulo",
+      "countryId": "BR"
+    },
+    {
+      "id": 2900,
+      "streetAddress": "20 Rue des Corps-Saints",
+      "postalCode": "1730",
+      "city": "Geneva",
+      "stateProvince": "Geneve",
+      "countryId": "CH"
+    },
+    {
+      "id": 3000,
+      "streetAddress": "Murtenstrasse 921",
+      "postalCode": "3095",
+      "city": "Bern",
+      "stateProvince": "BE",
+      "countryId": "CH"
+    },
+    {
+      "id": 3100,
+      "streetAddress": "Pieter Breughelstraat 837",
+      "postalCode": "3029SK",
+      "city": "Utrecht",
+      "stateProvince": "Utrecht",
+      "countryId": "NL"
+    },
+    {
+      "id": 3200,
+      "streetAddress": "Mariano Escobedo 9991",
+      "postalCode": "11932",
+      "city": "Mexico City",
+      "stateProvince": "Distrito Federal",
+      "countryId": "MX"
+    },
+    {
+      "streetAddress": "Jr. Lima",
+      "postalCode": "051",
+      "city": "Lima",
+      "stateProvince": "Lima",
+      "countryId": "PE",
+      "id": 3201
+    }
+  ]
+}

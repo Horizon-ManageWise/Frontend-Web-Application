@@ -1,0 +1,96 @@
+{
+  "meeting": [
+    {
+      "id": 1,
+      "title": "Sprint Planning Meeting",
+      "date": "2008-10-12T05:00:00.000Z",
+      "time": "12:00 AM",
+      "link": "https://meet.google.com/landing",
+      "recordingLink": "https://meet.google.com/recordings/sprint-planning",
+      "host": {
+        "name": "Juan Pérez",
+        "email": "juan.perez@example.com"
+      },
+      "participants": [
+        {
+          "name": "María López",
+          "email": "maria.lopez@example.com"
+        },
+        {
+          "name": "Carlos García",
+          "email": "carlos.garcia@example.com"
+        }
+      ],
+      "access_code": "123456"
+    },
+    {
+      "id": 2,
+      "title": "Retrospective Meeting",
+      "date": "2024-10-15",
+      "time": "2:00 PM",
+      "link": "https://meet.google.com/landing",
+      "recordingLink": "https://meet.google.com/recordings/retrospective",
+      "host": {
+        "name": "Ana Torres",
+        "email": "ana.torres@example.com"
+      },
+      "participants": [
+        {
+          "name": "Juan Pérez",
+          "email": "juan.perez@example.com"
+        },
+        {
+          "name": "María López",
+          "email": "maria.lopez@example.com"
+        }
+      ],
+      "access_code": "654321"
+    },
+    {
+      "id": 3,
+      "title": "Daily Standup",
+      "date": "2024-10-16",
+      "time": "9:00 AM",
+      "link": "https://meet.google.com/landing",
+      "recordingLink": "https://meet.google.com/recordings/daily-standup",
+      "host": {
+        "name": "Carlos García",
+        "email": "carlos.garcia@example.com"
+      },
+      "participants": [
+        {
+          "name": "Ana Torres",
+          "email": "ana.torres@example.com"
+        },
+        {
+          "name": "María López",
+          "email": "maria.lopez@example.com"
+        }
+      ],
+      "access_code": "789012"
+    },
+    {
+      "id": 4,
+      "title": "Sprint Review",
+      "date": "2024-10-22",
+      "time": "3:00 PM",
+      "link": "https://meet.google.com/landing",
+      "recordingLink": "https://meet.google.com/recordings/sprint-review",
+      "host": {
+        "name": "Juan Pérez",
+        "email": "juan.perez@example.com"
+      },
+      "participants": [
+        {
+          "name": "Carlos García",
+          "email": "carlos.garcia@example.com"
+        },
+        {
+          "name": "Ana Torres",
+          "email": "ana.torres@example.com"
+        }
+      ],
+      "access_code": "345678"
+    }
+  ]
+}

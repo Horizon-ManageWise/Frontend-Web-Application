@@ -1,0 +1,51 @@
+<mat-toolbar [style.background-color]="'black'" color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon *ngIf="sidenav.opened" style="color: white;">close</mat-icon>
+    <mat-icon *ngIf="!sidenav.opened" style="color: white;">apps</mat-icon>
+  </button>
+
+  <!-- Imagen en lugar del texto ManageWise -->
+  <img src="https://i.imgur.com/71rP5ni.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+
+  <a mat-button [routerLink]="['/project']" style="margin-left: 20px; color: white;">Project</a> <!-- Botón Project con texto blanco -->
+
+  <span class="mat-spacer"></span> <!-- Esto empuja los elementos hacia la derecha -->
+
+  <!-- Ícono de notificaciones -->
+  <button mat-icon-button aria-label="Notifications">
+    <mat-icon style="color: white;">notifications</mat-icon>
+  </button>
+
+  <!-- Ícono de perfil -->
+  <button mat-icon-button aria-label="Profile">
+    <mat-icon style="color: white;">account_circle</mat-icon>
+  </button>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav style="background-color: #FF8C00;"> <!-- Fondo del sidenav -->
+    <mat-nav-list>
+      <!-- Opciones diferentes en el sidenav -->
+      <ng-container *ngFor="let option of otherOptions">
+        <mat-list-item (click)="sidenav.mode === 'over' && sidenav.toggle()" [routerLink]="option.path">
+          <ng-container *ngIf="option.icon.startsWith('http'); else materialIcon">
+            <img [src]="option.icon" alt="{{ option.title }} icon" width="24px" height="24px">
+          </ng-container>
+          <ng-template #materialIcon>
+            <mat-icon matListItemIcon>{{ option.icon }}</mat-icon>
+          </ng-template>
+          {{ option.title }}
+        </mat-list-item>
+      </ng-container>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content">
+      <router-outlet></router-outlet>
+
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
