@@ -1,37 +1,104 @@
 {
   "userStories": [
     {
-      "Epic_Id": 1,
-      "Id": 101,
-      "Title": "Implementación de la autenticación de usuarios",
-      "Description": "Desarrollar un sistema de autenticación que permita a los usuarios iniciar sesi��n con su correo electrónico y contraseña.",
-      "AcceptanceCriteria": "Los usuarios deben poder iniciar sesión, recibir un mensaje de error si las credenciales son incorrectas y tener la opción de restablecer su contraseña.",
-      "Status": "En Progreso",
-      "CreationDate": "2024-10-01",
-      "Subgroup_ID": 5,
-      "Sprint_Id": 2
+      "id": 1,
+      "title": "Visualización de User Stories en el Timeline",
+      "description": "Como Scrum Master, quiero visualizar las User Stories en el timeline, para seguir el progreso del equipo y gestionar mejor las tareas.",
+      "owner": "Scrum Master",
+      "status": "To do",
+      "sprint": null,
+      "startDate": "2024-10-01",
+      "endDate": "2024-10-02",
+      "effort": 5
     },
     {
-      "Epic_Id": 1,
-      "Id": 102,
-      "Title": "Creación de la interfaz de usuario para la gestión de proyectos",
-      "Description": "Diseñar y desarrollar una interfaz de usuario amigable para que los usuarios puedan gestionar sus proyectos.",
-      "AcceptanceCriteria": "La interfaz debe ser intuitiva, permitiendo a los usuarios crear, editar y eliminar proyectos fácilmente.",
-      "Status": "Pendiente",
-      "CreationDate": "2024-10-02",
-      "Subgroup_ID": 5,
-      "Sprint_Id": 3
+      "id": 2,
+      "title": "Adición de una columna para un nuevo sprint en el Timeline",
+      "description": "Como Product Owner, quiero agregar columnas para nuevos sprints en el timeline, para organizar mejor las User Stories por períodos de tiempo.",
+      "owner": "Product Owner",
+      "status": "Complete",
+      "sprint": 1,
+      "startDate": "2024-10-06",
+      "endDate": "2024-10-07",
+      "effort": 3
     },
     {
-      "Epic_Id": 2,
-      "Id": 201,
-      "Title": "Integración de la API de terceros",
-      "Description": "Conectar la aplicación con una API de terceros para obtener datos adicionales.",
-      "AcceptanceCriteria": "Los datos deben actualizarse en tiempo real y mostrarse correctamente en la interfaz de usuario.",
-      "Status": "Completado",
-      "CreationDate": "2024-10-05",
-      "Subgroup_ID": 6,
-      "Sprint_Id": 1
+      "id": 3,
+      "title": "Estimación de Esfuerzo en User Stories",
+      "description": "Como Desarrollador, quiero ver la estimación de esfuerzo asociada a cada User Story, para gestionar mejor el tiempo y recursos del equipo.",
+      "owner": "Developer",
+      "status": "To do",
+      "sprint": 2,
+      "startDate": "2024-10-11",
+      "endDate": "2024-10-15",
+      "effort": 4
+    }
+  ],
+  "epics": [
+    {
+      "id": 1,
+      "title": "Epic de Gestión de Proyectos",
+      "project_id": 1,
+      "description": "Una épica que abarca todas las funcionalidades clave de la gestión de proyectos.",
+      "status": "In Progress",
+      "creationDate": "2024-09-20"
+    },
+    {
+      "id": 2,
+      "title": "Epic de Optimización del Sistema",
+      "project_id": 2,
+      "description": "Una épica que cubre todas las tareas relacionadas con la optimización del sistema.",
+      "status": "Complete",
+      "creationDate": "2024-09-25"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Crear funcionalidad de arrastrar y soltar",
+      "description": "Desarrollar una función que permita a los usuarios arrastrar y soltar tareas en el timeline.",
+      "status": "To do",
+      "creationDate": "2024-10-10",
+      "userStory_id": 1,
+      "sprint": 1
+    },
+    {
+      "id": 2,
+      "title": "Optimización de rendimiento de la base de datos",
+      "description": "Mejorar la eficiencia en las consultas a la base de datos.",
+      "status": "In Progress",
+      "creationDate": "2024-10-12",
+      "userStory_id": 3,
+      "sprint": 2
+    },
+    {
+      "id": 3,
+      "title": "Implementación de notificaciones en tiempo real",
+      "description": "Agregar notificaciones para cambios en User Stories.",
+      "status": "Complete",
+      "creationDate": "2024-10-14",
+      "userStory_id": 5,
+      "sprint": 2
+    }
+  ],
+  "members": [
+    {
+      "id": 1,
+      "name": "Juan Pérez",
+      "role": "Desarrollador",
+      "status": "Activo"
+    },
+    {
+      "id": 2,
+      "name": "María Gómez",
+      "role": "Scrum Master",
+      "status": "Activo"
+    },
+    {
+      "id": 3,
+      "name": "Ana Martínez",
+      "role": "Product Owner",
+      "status": "Inactivo"
     }
   ]
 }

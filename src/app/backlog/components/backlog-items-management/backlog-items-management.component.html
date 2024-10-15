@@ -4,6 +4,7 @@
   <button mat-raised-button class="item-create" (click)="openAddUserStoryForm()">Create</button>
 </div>
 
+
 <div class="us-section">
 <mat-card *ngFor="let userStory of userStories" class="us-card">
   <div class="us-container">
@@ -17,9 +18,9 @@
     <span>End Date: {{ userStory.endDate }}</span> <br>
     <span>Effort: {{ userStory.effort }}</span>
     <div class="card-footer-container">
-      <button mat-raised-button (click)="deleteUserStory(userStory)">Delete</button>
-      <button> Edit </button>
-      <button> Add to an epic </button>
+      <button (click)="onDeleteUserStory(userStory)" class="delete-button"><mat-icon>delete</mat-icon></button>
+      <button mat-raised-button (click)="openEditUserStoryForm(userStory)" class="edit-button"> <mat-icon>edit</mat-icon> </button>
+      <button class="items-button"> Add to an epic </button>
     </div>
   </div>
 </mat-card>
@@ -28,7 +29,7 @@
 
 <div class="item-header">
   <h6>Epics</h6>
-  <button class="item-create">Create</button>
+  <button mat-raised-button (click)="openAddEpicForm()" class="item-create">Create</button>
 </div>
 
 <div class="us-section">
@@ -41,9 +42,9 @@
       <span>Status: {{ epic.status }}</span> <br>
       <span>Creation Date: {{ epic.creationDate }}</span>
       <div class="card-footer-container">
-        <button>Delete</button>
-        <button> Edit </button>
-        <button> Show user stories </button>
+        <button (click)="onDeleteEpic(epic)" class="delete-button"><mat-icon>delete</mat-icon></button>
+        <button mat-raised-button (click)="openEditEpicForm(epic)" class="edit-button"> <mat-icon>edit</mat-icon> </button>
+        <button class="items-button"> Show user stories </button>
       </div>
     </div>
   </mat-card>
@@ -51,7 +52,7 @@
 
 <div class="item-header">
   <h6>Tasks</h6>
-  <button class="item-create">Create</button>
+  <button mat-raised-button (click)="openAddTaskForm()" class="item-create">Create</button>
 </div>
 
 <div class="us-section">
@@ -62,12 +63,12 @@
       <span>Description: {{ task.description }}</span> <br>
       <span>Status: {{ task.status }}</span> <br>
       <span>Creation Date: {{ task.creationDate }}</span> <br>
-      <span>User Story: {{ task.userStoryId }}</span> <br>
+      <span>User Story: {{ task.userStory_id }}</span> <br>
       <span>Sprint: {{ task.sprint }}</span> <br>
       <div class="card-footer-container">
-        <button>Delete</button>
-        <button> Edit </button>
-        <button> Add to an user story </button>
+        <button (click)="onDeleteTask(task)" class="delete-button"><mat-icon>delete</mat-icon></button>
+        <button mat-raised-button (click)="openEditTaskForm(task)" class="edit-button"> <mat-icon>edit</mat-icon> </button>
+        <button class="items-button"> Add to an user story </button>
       </div>
     </div>
   </mat-card>

@@ -4,7 +4,7 @@ export class Task {
   description: string;
   status: 'Pending' | 'In Progress' | 'Complete';
   creationDate: Date;
-  userStoryId: number;
+  userStory_id: number;
   sprint: number;
 
   constructor(
@@ -13,7 +13,7 @@ export class Task {
     description: string,
     status: 'Pending' | 'In Progress' | 'Complete',
     creationDate: Date,
-    userStoryId: number,
+    userStory_id: number,
     sprint: number
   ) {
     this.id = id;
@@ -21,7 +21,7 @@ export class Task {
     this.description = description;
     this.status = status;
     this.creationDate = creationDate;
-    this.userStoryId = userStoryId;
+    this.userStory_id = userStory_id;
     this.sprint = sprint;
   }
 }

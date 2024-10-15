@@ -44,3 +44,12 @@
 .add-item:hover{
   cursor: pointer;
 }
+.delete-button{
+  border: none;
+  color: red;
+  background-color: transparent;
+}
+.delete-button:hover{
+  color: brown;
+  cursor: pointer;
+}
