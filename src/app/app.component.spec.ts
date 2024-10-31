@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'managewise' title`, () => {
+  it(`should have the 'Managewise-reportes' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('managewise');
+    expect(app.title).toEqual('Managewise-reportes');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, managewise');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Managewise-reportes');
   });
 });

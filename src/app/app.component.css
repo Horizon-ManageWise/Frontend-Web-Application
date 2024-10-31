@@ -1,10 +1,18 @@
 .mat-spacer {
   flex: 1 1 auto;
 }
+
+mat-toolbar {
+  background-color: black !important; /* Fondo negro */
+  color: white !important; /* Texto blanco */
+}
+
 mat-sidenav {
-  width: 200px;
+  width: 240px;
   border-right: none;
   padding: 16px 0;
+  background-color: orange !important; /* Fondo naranja */
+  color: white !important; /* Texto blanco */
 }
 .content {
   height: calc(100svh - 98px);
@@ -18,30 +26,9 @@ mat-sidenav {
 mat-sidenav-container {
   height: calc(100svh - 65px);
 }
-
-mat-toolbar {
-  background: #141414;
-  color: white;
-}
-
-mat-sidenav{
-  background: darkorange;
-  border-radius: 0px;
-}
-
-mat-icon{
-  color: white;
-}
-
-mat-list-item mat-icon{
-  color: black;
-}
-
-#wise{
-  color: darkorange;
-}
-
-.logo{
-  width: 3rem;
-  margin-right: 0.5rem;
+.logo {
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: auto;
 }
