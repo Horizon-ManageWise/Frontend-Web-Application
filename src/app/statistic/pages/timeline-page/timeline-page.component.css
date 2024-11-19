@@ -2,7 +2,38 @@
   transform: scale(0.3); /* Scale down to 30% for the timeline */
   transform-origin: top left; /* Ensure scaling starts from the top left */
 }
+.members-container {
+  flex: 0 0 250px; /* Ancho fijo para la lista de miembros */
+  padding: 10px; /* Espaciado interno */
+  border-left: 1px solid #ccc; /* Línea separadora a la izquierda */
+  height: fit-content; /* Ajustar a la altura del contenido */
+  display: flex; /* Usar flexbox para organizar la lista */
+  flex-direction: column; /* Dirección de columna para la lista de miembros */
+}
 
+.members-container h3 {
+  margin: 0; /* Sin margen para el título */
+}
+.member-item {
+  display: flex; /* Usar flexbox para alinear el contenido */
+  align-items: center; /* Centrar verticalmente el contenido */
+  padding: 10px; /* Espaciado interno */
+  border-bottom: 1px solid #ccc; /* Línea separadora */
+}
+
+.member-item:last-child {
+  border-bottom: none; /* Sin línea para el último elemento */
+}
+
+.member-status, .member-role {
+  margin-left: 10px; /* Espacio a la izquierda de los textos */
+}
+
+.member-icon {
+  width: 24px; /* Ancho del ícono */
+  height: 24px; /* Altura del ícono */
+  margin-right: 10px; /* Espacio a la derecha del ícono */
+}
 /* Estilo para las historias de usuario */
 /* Estilo de la tabla de historias de usuario */
 .user-stories-table {

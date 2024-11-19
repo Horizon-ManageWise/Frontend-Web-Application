@@ -16,10 +16,28 @@ export class StatisticsService {
 
   constructor(private http: HttpClient) {}
 
-  // Método para obtener las User Stories desde la API
   getUserStories(): Observable<Statistics[]> {
-    return this.http.get<Statistics[]>(`${this.apiUrl}/user-stories`);
+    return this.http.get<Statistics[]>(`${this.apiUrl}/user-stories`).pipe(
+      map((stories) => {
+        // Si las historias pueden tener status null, quita el filtro
+        return stories;  // Eliminamos el filtro
+      })
+    );
   }
+
+loadUserStories(): Observable<any[]> {
+  return this.http.get<any[]>(`${this.apiUrl}/user-stories`).pipe(
+    map((stories) =>
+      stories.map((story) => ({
+        id: story.id,
+        status: story.status,
+        title: story.title,
+        sprintId: story.sprintId,
+      }))
+    )
+  );
+}
+
 
   // Método para obtener los Sprints desde la API
   getSprints(): Observable<Sprint[]> {

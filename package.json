@@ -23,7 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^17.0.1",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
-    "apexcharts": "^3.54.0",
+    "apexcharts": "^3.54.1",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.4",
     "moment": "^2.30.1",

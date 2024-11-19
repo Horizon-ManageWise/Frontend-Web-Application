@@ -1,6 +1,5 @@
 <!-- Button to Redirect to Statistics -->
 
-<button (click)="navigateToStatistics()" class="redirect-button">{{ 'statisticsButton' | translate }}</button>
 <p>{{ 'timelineText' | translate }}</p>
 
 <div id="chart">
@@ -33,5 +32,18 @@
     <td>{{ story.title }}</td>
     <td>{{ story.effort }}</td>
   </tr>
+
   </tbody>
 </table>
+<br>
+<div class="members-container" *ngIf="members && members.length > 0">
+  <h3>{{ 'membersTitle' | translate }}</h3>
+  <ul>
+    <li *ngFor="let member of members" class="member-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/1361/1361728.png" alt="Icon" class="member-icon" />
+      <span>{{ member.personName.fullName }}</span>
+
+      <span class="member-role">{{ member.role }}</span> <!-- Mostrar el rol -->
+    </li>
+  </ul>
+</div>

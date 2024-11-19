@@ -20,6 +20,10 @@ export class TimelinePageComponent implements OnInit, AfterViewInit {
   sprints: Sprint[] = [];
   userStories: any[] = [];
   chartOptions: any = {};
+    public isLoadingMembers: boolean = true;
+
+    public members: any[] = [];
+
 
   private sprintColors: { [key: number]: string } = {
     1: '#FF5733',
@@ -40,6 +44,8 @@ export class TimelinePageComponent implements OnInit, AfterViewInit {
     this.initializeChartOptions();
     this.loadSprints();
     this.loadUserStories();
+        this.loadMembers();
+
   }
 
   ngAfterViewInit() {
@@ -139,5 +145,18 @@ export class TimelinePageComponent implements OnInit, AfterViewInit {
 
   navigateToStatistics() {
     this.router.navigate(['/statistics']);
+  }
+private loadMembers(): void {
+    this.statisticsService.getMembers().subscribe({
+      next: (members) => {
+        console.log('Members cargados:', members);
+        this.members = members;
+        this.isLoadingMembers = false;
+      },
+      error: (error) => {
+        this.isLoadingMembers = false;
+        console.error('Error al cargar miembros:', error);
+      },
+    });
   }
 }

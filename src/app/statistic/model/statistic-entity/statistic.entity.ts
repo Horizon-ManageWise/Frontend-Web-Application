@@ -3,18 +3,18 @@ export class Statistics {
   title: string;
   description: string;
   owner: string;
-  status: 'TO_DO' | 'COMPLETE';
-  sprint: number;
-  effort: number; // Ensure this property exists
+  status: 'TO_DO' | 'DONE'; // Define explícitamente los posibles valores de estado
+  sprint: number; // Representa el ID del sprint asociado
+  effort: number; // Representa el esfuerzo asociado a la historia
 
   constructor(
     id: number,
     title: string,
     description: string,
     owner: string,
-    status: 'TO_DO' | 'COMPLETE',
+    status: 'TO_DO' | 'DONE',
     sprint: number,
-    effort: number // Add the effort parameter
+    effort: number
   ) {
     this.id = id;
     this.title = title;
@@ -22,6 +22,6 @@ export class Statistics {
     this.owner = owner;
     this.status = status;
     this.sprint = sprint;
-    this.effort = effort; // Assign the effort property
+    this.effort = effort;
   }
 }
